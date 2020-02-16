@@ -13,6 +13,15 @@ env:
     #PIPELINE_OVERRIDE: "devops-automation/pipeline-stages.yml"
     #  ORBITER_PATH: ""
     #  ORBITER_GIT_URL: ""
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+  # secrets-manager:
+    #  ORBITER_GIT_URL: secret-id:json-key:version-stage:version-id
+    #  key: secret-id:json-key:version-stage:version-id
+  #exported-variables:
+     # - variable
+     # - variable    
   git-credential-helper: yes
 
 phases:
@@ -26,5 +35,5 @@ phases:
      - wget -O - https://raw.githubusercontent.com/vijayashankar-g/aws-code-pipeline-install-scripts/master/linux/orbiter-install.sh | bash
   build:
     commands:
-      - pwd; echo "path of the pipeline $Env:ORBITER_PATH"; cd $Env:ORBITER_PATH
+      - pwd; echo "path of the pipeline $ORBITER_PATH"; cd $ORBITER_PATH
       - python start_build.py
