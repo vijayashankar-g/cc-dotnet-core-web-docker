@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     APP_TYPE: "dotnet_core_cdk"
-    BUILD_TYPE: "full"
+    BUILD_TYPE: "destroy"
     BUILD_PACK: "dotnet_ecs_fargate"
     APP_CSPROJ_LOC: "aspnetapp"
     DOCKER_FILE_PATH: "Dockerfile"
