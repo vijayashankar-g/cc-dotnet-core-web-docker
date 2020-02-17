@@ -24,7 +24,7 @@ spec:
           containerPort: 80
         imagePullPolicy: Always
       nodeSelector:
-        beta.kubernetes.io/os: windows
+        beta.kubernetes.io/os: linux
 ---
 apiVersion: v1
 kind: Service
