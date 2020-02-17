@@ -12,6 +12,7 @@ env:
     K8S_REGION: "us-west-2"
     K8S_NAMESPACE: "application"
     CDK_APP_NAME: "app-cc-dotnet-core-web-docker-master"
+    CUSTOM_DOCKER_IMAGE: "501361998365.dkr.ecr.us-east-2.amazonaws.com/aws-cdk/assets:4ba7cd10543717c69072540f50d7e95db63d72a75c022d025b8d0250739d1c36"
     #PIPELINE_OVERRIDE: "devops-automation/pipeline-stages.yml"
     #  ORBITER_PATH: ""
     #  ORBITER_GIT_URL: ""
