@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    APP_TYPE: "dotnet_core_cdk"
+    APP_TYPE: "dotnet_core_k8s"
     BUILD_TYPE: "full"
     BUILD_PACK: "dotnet_ecs_fargate"
     APP_CSPROJ_LOC: "aspnetapp"
