@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: windows-server-iis
+  name: dotnet-core
 spec:
   selector:
     matchLabels:
-      app: windows-server-iis
+      app: dotnet-core
       tier: backend
       track: stable
   replicas: 1
   template:
     metadata:
       labels:
-        app: windows-server-iis
+        app: dotnet-core
         tier: backend
         track: stable
     spec:
       containers:
-      - name: windows-server-iis
+      - name: dotnet-core
         image: auto-replace-image
         ports:
         - name: http
@@ -29,7 +29,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: windows-server-iis-service
+  name: dotnet-core-service
   namespace: application
 spec:
   ports:
@@ -37,7 +37,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: windows-server-iis
+    app: dotnet-core
     tier: backend
     track: stable
   sessionAffinity: None
